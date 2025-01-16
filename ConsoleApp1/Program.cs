@@ -1,193 +1,73 @@
-﻿
-//-user input(read / write)
-
-//3 -
-
-
-//using System;
-
-//namespace Test
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            Console.Write("Enter Name: ");
-//            string text = Console.ReadLine();
-//            Console.WriteLine("You Name: " + text);
-//        }
-//    }
-//}
-
-
-//1-C# variables 
-
-
-
-//using System;
-
-//namespace InputProgram
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//int age = 25;
-//string name = "Alice";
-
-
-//int age;
-//age = 25; // Initialization happens later
-
-
-//int x;
-//int y;
-//int z;
-
-//int x = 1, y = 2, z = 3;
-//int a, s, d;
-
-
-//int number = 100;          // Integer
-//float rate = 10.5f;       // Floating-point number
-//char code = 'A';      // Character
-//bool isValid = true;      // Boolean value
-//string name = "Steve";    // String
-
-//Console.WriteLine(name);
-
-//        }
-//    }
-//}
-
-
-
-
-
-
-
-
-
-
-
-//array 
-//2-
-
-
-//using System;
-
-//namespace InputProgram
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            int[] intArray;
-
-//            // Declare an array of strings
-//            string[] stringArray;
-
-
-//            ////////////////////
-
-
-//            // Initialize with values
-//            int[] intArray = { 1, 2, 3, 4, 5 };
-
-//            // Alternatively, you can use shorthand
-//            string[] stringArray = { "apple", "banana", "cherry" };
-
-//            ////////////////////
-
-
-//            // Accessing elements in a single-dimensional array
-
-//            int firstElement = intArray[0]; // Gets the first element (1)
-//            string secondElement = stringArray[1]; // Gets the second element ("banana")
-
-//            // Change the first element of intArray
-//            intArray[0] = 10; // Now intArray is {10, 2, 3, 4, 5}
-
-//            Console.WriteLine(secondElement);
-
-
-//            int[] numbers = { 1, 2, 3 };
-//for (int i = 0; i < numbers.Length; i++)
-//{
-//    Console.Write(numbers[i]);
-//}
-
-//Console.WriteLine("  ");
-//int first = numbers[0];
-//Console.WriteLine(first);
-
-
-
-
-//numbers[0] = 5;
-//for (int i = 0; i < numbers.Length; i++)
-//{
-//    Console.Write(numbers[i]);
-//}
-
-//        }
-//    }
-//}
-
-
+// Folder: CSharp_tasks
+// File: 16.01.2025.cs
 
 using System;
 
-namespace InputProgram
+namespace CSharp_tasks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string name = Console.ReadLine();
+            // Task 1: Read string from user and print it
+            Console.Write("Enter a string: ");
+            string userInput = Console.ReadLine();
+            Console.WriteLine("You entered: " + userInput);
 
-            Console.WriteLine(name);
+            // Task 2: Define and display variables
+            double myDouble = 10.5;
+            string myString = "Hello, World!";
+            char myChar = 'A';
+            bool myBool = true;
+            int myInt = 100;
+            const string myConst = "This is constant";
 
-            ////
-            ///
+            Console.WriteLine($"Double: {myDouble}");
+            Console.WriteLine($"String: {myString}");
+            Console.WriteLine($"Char: {myChar}");
+            Console.WriteLine($"Bool: {myBool}");
+            Console.WriteLine($"Int: {myInt}");
+            Console.WriteLine($"Const: {myConst}");
 
-            int a = 4;
-            string b = "aaaa";
-            float c = 4.4f;
-            double d = 4.4533;
-            char j = 'f';
-            bool aa = true;
-
-            /////
-            ///
-
-            string[] car = { "audi", "bmw", "toyota" };
-            for (int i = 0; i < car.Length; i++)
+            // Task 3: Define and display car array
+            string[] cars = { "Toyota", "Honda", "Ford", "BMW" };
+            Console.WriteLine("Cars in the array:");
+            foreach (var car in cars)
             {
-                Console.WriteLine(car[i]);
+                Console.WriteLine(car);
             }
-            ///////
-            ///
+            Console.WriteLine($"Array length: {cars.Length}");
 
-            string fname = Console.ReadLine();
-            string lname = Console.ReadLine();
-            string age = Console.ReadLine();
+            // Task 4: Read and display personal details
+            Console.Write("Input your firstname: ");
+            string firstName = Console.ReadLine();
 
-            Console.Write(fname, lname, age);
-            /////
-            ///
-            int[] random = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            foreach (var i in random)
+            Console.Write("Input your lastname: ");
+            string lastName = Console.ReadLine();
+
+            Console.Write("Input your year of birth: ");
+            string yearOfBirth = Console.ReadLine();
+
+            Console.WriteLine($"{firstName} {lastName} {yearOfBirth}");
+
+            // Task 5: Store and display elements in an array
+            int[] elements = new int[10];
+
+            Console.WriteLine("Input 10 elements in the array:");
+            for (int i = 0; i < elements.Length; i++)
             {
-                Console.Write(i);
+                Console.Write($"element - {i} : ");
+                elements[i] = Convert.ToInt32(Console.ReadLine());
             }
-            /////////
 
-
-
-
-
-
+            Console.WriteLine("Elements in the array are:");
+            foreach (var element in elements)
+            {
+                Console.Write(element + " ");
+            }
         }
     }
 }
+
+
+//Mohammad Al-shorman
